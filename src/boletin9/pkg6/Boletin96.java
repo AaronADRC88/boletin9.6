@@ -1,3 +1,4 @@
+//:)
 package boletin9.pkg6;
 
 public class Boletin96 {
