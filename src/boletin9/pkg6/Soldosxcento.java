@@ -18,19 +18,25 @@ public class Soldosxcento {
     }
 
     public void makeStatistical() {
-        soldo=this.pedirSoldo();
         int contador = 0;
-        while (soldo!=0){
-            soldo=this.pedirSoldo();
-            if (soldo >= 1000 || soldo<= 1750) {
+        int contador3 = 0;
+        int contador2 = 0;
+        soldo = this.pedirSoldo();
+        while (soldo != 0) {
+            if (soldo >= 1000 && soldo <= 1750) {
                 contador++;
             }
-            int contador2 = 0;
-            if (soldo< 1000) {
-                contador2++;
-                percent = (contador2 * 100) / (contador + contador2);
+
+            if (soldo > 1750) {
+                contador3++;
             }
-        } 
+
+            if (soldo < 1000 && soldo > 0) {
+                contador2++;
+                percent = (contador2 * 100) / (contador + contador2 + contador3);
+            }
+            soldo = this.pedirSoldo();
+        }
         JOptionPane.showMessageDialog(null, "Soldos comprendidos entre[1000 e 1750]=" + contador + "\n" + "Porcentaxe de soldos menores de 1000€=" + percent + "%");
     }
 }
