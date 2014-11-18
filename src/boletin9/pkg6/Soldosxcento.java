@@ -21,6 +21,7 @@ public class Soldosxcento {
         soldo=this.pedirSoldo();
         int contador = 0;
         while (soldo!=0){
+            soldo=this.pedirSoldo();
             if (soldo >= 1000 || soldo<= 1750) {
                 contador++;
             }
